@@ -84,12 +84,11 @@ class Pay():
 			driver.find_element_by_xpath("//button[@type='submit']").click()
 
 
-
 if __name__ == '__main__':
 	pay = Pay()
 	print 'getting credit'
 	credit = pay.getCredit()
-	if credit >= 0:
+	if credit > 0.0:
 		print 'getting debit'
 		debit = pay.getDebit(0)
 
